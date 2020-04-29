@@ -21,16 +21,19 @@ int main(int argc, const char * argv[]) {
     std::map<int,ElementFacturable> une_facture;
     
     
-    std::cout<< "Choisir parmi ces choix de taches:\n";
-    std::cout<< "1. Ajouter des nuitées\n";
-    std::cout<< "2. Ajouter des repas\n";
-    std::cout<< "3. Ajouter un accès au spa\n";
-    std::cout<< "4. Ajouter un accès au gym\n";
-    std::cout<< "5. Afficher la facture et quitter\n";
     
-    std::cin>>choix;
     
     do {
+        
+        std::cout<< "Choisir parmi ces choix de taches:\n";
+        std::cout<< "1. Ajouter des nuitées\n";
+        std::cout<< "2. Ajouter des repas\n";
+        std::cout<< "3. Ajouter un accès au spa\n";
+        std::cout<< "4. Ajouter un accès au gym\n";
+        std::cout<< "5. Afficher la facture et quitter\n";
+        
+        std::cin>>choix;
+        
         switch (choix) {
             case 1:{
                 std::cout<<"*** Ajout de nuitees ***\n";

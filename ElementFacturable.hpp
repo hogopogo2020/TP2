@@ -11,17 +11,53 @@
 
 #include <stdio.h>
 #include <string>
-#include "ElementFacturable.hpp"
 
 
-class ElementFacturable{
+
+class ElementFacturable {
     
 protected:
     std::string type;
+    int importance=0;
+    float tarif=0;
+    int nb_element=0;
+    
 public:
-    //ElementFacturable();
+    ElementFacturable(){}
     
     virtual ~ElementFacturable(){}
+    
+    virtual int getImportance(){
+        return importance;
+    }
+    
+    virtual void setImportance(int importance){
+        this->importance=importance;
+    }
+    
+    virtual std::string getType(){
+       return type;
+       }
+       
+    virtual void setType(std::string type){
+           this->type=type;
+       }
+    
+    virtual float getTarif(){
+        return tarif;
+    }
+    
+    virtual void setTarif(float tarif){
+        this->tarif=tarif;
+    }
+    
+    virtual int getNb_Element(){
+        return nb_element;
+    }
+    
+    virtual void setNbElement(int nb_element){
+        this->nb_element=nb_element;
+    }
     
     virtual float calculerCout()=0;
 };

@@ -14,38 +14,12 @@
 #include "ElementFacturable.hpp"
 
 class FacturableFraisFixe : public ElementFacturable{
-    
-protected:
-    float tarif=0;
-    int importance=0;
-    std::string type;
+
 public:
     
     FacturableFraisFixe(std::string type);
     
-    float getTarif(){
-        return tarif;
-    }
-    
-    void setTarif(float tarif){
-        this->tarif=tarif;
-    }
-    
-    int getImportance(){
-        return importance;
-    }
-    
-    void setImportance(int importance){
-        this->importance=importance;
-    }
-    
-    std::string getType(){
-       return type;
-       }
-       
-    void setType(std::string type){
-           this->type=type;
-       }
+
     
     float calculerCout();
 };

@@ -7,7 +7,7 @@
 //
 
 #include "FacturableFraisFixe.hpp"
-
+//Constructeur
 FacturableFraisFixe::FacturableFraisFixe(std::string type){
     this->type=type;
     if (type=="SPA"){
@@ -21,9 +21,9 @@ FacturableFraisFixe::FacturableFraisFixe(std::string type){
         this->nb_element=1;
     }
 }
-
+//Ajout des taxes de 7% et 8% au cout de l'element facturable
  float FacturableFraisFixe::calculerCout(){
-    tarif=tarif*nb_element;
-    float cout_total=(tarif*0.08)+(tarif*0.07)+tarif;
+    float cout_total=0;
+    cout_total=(tarif*0.08)+(tarif*0.07)+tarif;
     return cout_total;
 }
